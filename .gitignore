@@ -1,2 +1,4 @@
 envi
 tailwindcss
+.DS_Store
+__pycache__
