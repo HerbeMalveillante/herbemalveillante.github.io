@@ -4,7 +4,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				alkatra: ["Alkatra", "sans-serif"],
+				bungee: ["Bungee", "cursive"],
 			},
 		},
 	},
