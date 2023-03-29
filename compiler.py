@@ -90,7 +90,7 @@ def updateBlog():
         preview = preview.replace("@author@", fruit.author)
         preview = preview.replace("@tags@", ", ".join(fruit.tags))
         preview = preview.replace("@link@", fruit.filepath.replace(".md", ".html"))
-        preview = preview.replace("@preview@", re.sub('<[^<]+?>', '', markdown.markdown(fruit.content)[:200]))
+        preview = preview.replace("@preview@", re.sub('<[^<]+?>', '', markdown.markdown(fruit.content)[:200] + "..."))
 
         content += preview
 
