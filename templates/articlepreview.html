@@ -1,8 +1,14 @@
-<div>
-	<p>@title@</p>
-	<p>@date@</p>
-	<p>@author@</p>
-	<p>@tags@</p>
-	<p>@preview@</p>
-	<a href="blog/@link@">@link@</p>
+<div class="p-2 border-2 border-white rounded-xl hover:scale-110 group transition-all ease-in-out w-full bg-slate-900">
+	<a href="blog/@link@">
+		<div class="flex items-center justify-between">
+			<h2 class="text-2xl font-bungee group-hover:underline">@title@</h2>
+			<span class="text-slate-500 font-ubuntu">@date@</span>
+		</div>
+		<p class="ml-2 text-slate-500 font-ubuntu">
+			- Written by
+			<span class="underline">@author@</span>
+		</p>
+		<p class="font-ubuntu p-3 italic">@preview@</p>
+		<p class="font-ubuntu text-slate-500">Tags : @tags@</p>
+	</a>
 </div>

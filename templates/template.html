@@ -5,10 +5,51 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../static/output.css" />
+		<link rel="stylesheet" href="../static/articleStyle.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet" />
 
 		<title>@title@</title>
 	</head>
-	<body>
-		@content@
+	<body class="bg-slate-800 text-white p-10 flex flex-col items-center justify-center w-full gap-10">
+		<div class="flex items-center justify-between w-full">
+			<a href="../blog.html">
+				<svg
+					class="w-10 hover:scale-150 transition-all ease-in-out"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					fill="currentColor"
+					class="w-6 h-6"
+				>
+					<path
+						fill-rule="evenodd"
+						d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-4.28 9.22a.75.75 0 000 1.06l3 3a.75.75 0 101.06-1.06l-1.72-1.72h5.69a.75.75 0 000-1.5h-5.69l1.72-1.72a.75.75 0 00-1.06-1.06l-3 3z"
+						clip-rule="evenodd"
+					/>
+				</svg>
+			</a>
+			<a
+				href="../index.html"
+				class="group transition-all ease-in-out flex flex-col items-center justify-center h-full gap-2"
+			>
+				<div class="flex items-center justify-center w-full h-full gap-5">
+					<img class="rounded-full w-10" src="../static/images/pdp.JPG" alt="Vergazon's profile picture" />
+					<span class="h-auto font-bungee text-2xl">Vergazon</span>
+				</div>
+				<div class="bg-white h-1 w-0 group-hover:w-full transition-all ease-in-out"></div>
+			</a>
+		</div>
+		<div class="w-full sm:w-2/3 md:w-3/4 font-ubuntu flex flex-col gap-3">
+			<div class="w-full text-center font-bungee text-5xl">@title@</div>
+			<div class="w-full flex items-center justify-between">
+				<span class="font-ubuntu text-slate-500 text-3xl">@author@</span>
+				<span class="font-ubuntu text-slate-500 text-3xl">@date@</span>
+			</div>
+			<div id="customStyle" class="customStyle">
+				<div class="flex flex-col gap-3 text-xl">@content@</div>
+			</div>
+		</div>
 	</body>
 </html>

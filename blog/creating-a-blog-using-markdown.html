@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../static/output.css" />
+		<link rel="stylesheet" href="../static/articleStyle.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet" />
+
+		<title>Generating a static blog using Markdown and Tailwind</title>
+	</head>
+	<body class="bg-slate-800 text-white p-10 flex flex-col items-center justify-center w-full gap-10">
+		<div class="flex items-center justify-between w-full">
+			<a href="../blog.html">
+				<svg
+					class="w-10 hover:scale-150 transition-all ease-in-out"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					fill="currentColor"
+					class="w-6 h-6"
+				>
+					<path
+						fill-rule="evenodd"
+						d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-4.28 9.22a.75.75 0 000 1.06l3 3a.75.75 0 101.06-1.06l-1.72-1.72h5.69a.75.75 0 000-1.5h-5.69l1.72-1.72a.75.75 0 00-1.06-1.06l-3 3z"
+						clip-rule="evenodd"
+					/>
+				</svg>
+			</a>
+			<a
+				href="../index.html"
+				class="group transition-all ease-in-out flex flex-col items-center justify-center h-full gap-2"
+			>
+				<div class="flex items-center justify-center w-full h-full gap-5">
+					<img class="rounded-full w-10" src="../static/images/pdp.JPG" alt="Vergazon's profile picture" />
+					<span class="h-auto font-bungee text-2xl">Vergazon</span>
+				</div>
+				<div class="bg-white h-1 w-0 group-hover:w-full transition-all ease-in-out"></div>
+			</a>
+		</div>
+		<div class="w-full sm:w-2/3 md:w-3/4 font-ubuntu flex flex-col gap-3">
+			<div class="w-full text-center font-bungee text-5xl">Generating a static blog using Markdown and Tailwind</div>
+			<div class="w-full flex items-center justify-between">
+				<span class="font-ubuntu text-slate-500 text-3xl">Vergazon</span>
+				<span class="font-ubuntu text-slate-500 text-3xl">30/03/2023</span>
+			</div>
+			<div id="customStyle" class="customStyle">
+				<div class="flex flex-col gap-3 text-xl"><h1>What is this project ?</h1>
+<p>I've been looking for a <strong>quick</strong>, <strong>customizable</strong> and <strong>performant</strong> way to create a website and a <strong>blog</strong> for a long time. I can safely say I tried the majority of the existing solutions, and after always being disappointed by the method or language I was using, I finally decided to write a <strong>little compiler</strong> that takes Markdown files as input, and produces clean static HTML files.</p>
+<h1>I tried many solutions.</h1>
+<h2>Svelte</h2>
+<p>Svelte (<a href="https://svelte.dev/">svelte.dev</a>) is a modern framework that allows for the creation of very powerful <strong>single-page applications</strong>. Altough it is extremely fast, and appreciated by the community, I found it to be a bit too "bleeding edge" for my needs : the community is still relatively small, and the online documentation and exemples are not as complete as I would have liked.</p>
+<p>However, I still think this framework is one of the best front-end Javascript frameworks out there, and I definitely will take a look at it again in the future.</p>
+<h2>Flask</h2>
+<p>Flask (<a href="https://flask.palletsprojects.com/en/2.2.x/">https://flask.palletsprojects.com/</a>) is a micro-framework for Python, that allows for the creation of web applications. It is very easy to use, and the documentation is very complete.</p>
+<p>I think this is <strong>the best solution I have found so far</strong>, being extremely powerful while still being beginner-friendly. I even bought a hosting plan for future projects (Not this Blog though, as you will see later on).</p>
+<p>However, I found it to be a bit <strong>too bloated for my needs</strong> : in my mind, a blog created with Flask would have a database, a markdown editor, an account/comment system, and many more features. I knew if I started working on this project, I would end up <strong>spending months on it</strong>, and I didn't want to spend that much time on a project that would not be used by anyone but me to write silly articles to the internet.</p>
+<h2>Vanilla HTML</h2>
+<p>Finally, the last solution that came to my mind was to simply write the HTML files <strong>by hand</strong>. I was almost ready to do this, when I realized that I would have to write the same HTML code for every article, and for <strong>every page of the website</strong>. I would have to write the same HTML code for the header, the footer, the navigation bar, and many more, by hand.</p>
+<p>As I am a programmer, I don't like to do things by hand, and I don't like to repeat myself (and I'm way too lazy to do it anyways...). So I decided not to use this solution either.</p>
+<h1>What is the solution I finally chose ?</h1>
+<p>As I said in the introduction to this article, I decided to take the simplicity of the Vanilla HTML approach, and the power of Flask templating that I really liked. I also wanted to use a language that I was already familiar with, and that I could use to <strong>write the compiler</strong>.</p>
+<p>This led me to the creation of this project, which is extremely simple in terms of code, and very easy to use.</p>
+<p>Basically, I will write any Markdown article in a specific folder using VSCode, and ask a Python script to <strong>compile it to HTML</strong>, and to embed it in a custom template. The result is a static HTML file that can be hosted on any web server, or GitHub Pages (which I ended up using, as it is free and very easy to use).</p>
+<p>I plan on using another hosting service in the future (GitHub Pages caching is not very good, and I don't want to wait hours for my changes to be visible), but for now, it is more than enough for my needs.</p>
+<p>The great thing about static HTML files is that I will be able to optimize the <strong>referencement of my website</strong>, allowing me to rank higher on Google, and to be found more easily.</p>
+<p>I also am using VSCode to write Markdown, which is extremely convenient as it <strong>formats the text automatically</strong>, and allows me to preview the result in real time.</p>
+<h1>How does this work ?</h1>
+<p>The Python compiler is extremely simple : It searches for all the Markdown files in the <code>garden</code> folder in the root of my project, and for each of them, it will :</p>
+<ul>
+<li>Extract metadata from the first lines (title, author, etc.)</li>
+<li>Generate a preview of the blog post, and adds it to the <a href="../blog.html">blog page</a>.</li>
+<li>Generate a static HTML from a custom template, and add it to the <code>blog</code> folder.</li>
+</ul>
+<p>Everything fits in more or less <strong>150 lines of code</strong>, in a single Python file. I will not go into the details of the code, as it is not the purpose of this article, but you can find the <a href="https://github.com/herbemalveillante/herbemalveillante.github.io/">source code on GitHub</a>.</p>
+<h1>What next ?</h1>
+<p>I plan on adding more features to this project in the future, such as :</p>
+<ul>
+<li>A better way to manage the metadata of the blog posts</li>
+<li>Adding a cover image to posts</li>
+<li>Adding a search bar</li>
+<li>Adding pagination to the blog page</li>
+<li>Adding a separate <code>Projects</code> page that links to every blog post containing the <code>project</code> tag</li>
+<li>Adding a better way to embed code snippets (I'm using images for now, which is not ideal )</li>
+<li>Creating videos for every important project, alongside the blog posts.</li>
+<li>Adding LaTeX or MathJax support to embed mathematical formulas in the blog posts.</li>
+</ul>
+<p>This project is <strong>open-source</strong> : feel free to clone the project and adapt it to your needs, or to <strong>contribute</strong> to it !</p>
+<h1>Follow me for more !</h1>
+<p>You can find me on <a href="https://twitter.com/P4CO3">Twitter</a>, <a href="https://github.com/herbemalveillante">GitHub</a>, <a href="https://www.youtube.com/channel/UC0qAWS1GcM8_cRLoPtLgNHA">YouTube</a>, and <a href="https://discord.gg/6Qu3FdvHYz">Discord</a>.</p>
+<p>I'll be posting <strong>many more articles</strong> and projects about programming, game development, reinforcement learning and my learning process in general. I hope you'll enjoy them !</p></div>
+			</div>
+		</div>
+	</body>
+</html>

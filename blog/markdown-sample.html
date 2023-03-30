@@ -5,14 +5,54 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../static/output.css" />
+		<link rel="stylesheet" href="../static/articleStyle.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet" />
 
 		<title>Sample file</title>
 	</head>
-	<body>
-		<h1>An h1 header</h1>
+	<body class="bg-slate-800 text-white p-10 flex flex-col items-center justify-center w-full gap-10">
+		<div class="flex items-center justify-between w-full">
+			<a href="../blog.html">
+				<svg
+					class="w-10 hover:scale-150 transition-all ease-in-out"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					fill="currentColor"
+					class="w-6 h-6"
+				>
+					<path
+						fill-rule="evenodd"
+						d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-4.28 9.22a.75.75 0 000 1.06l3 3a.75.75 0 101.06-1.06l-1.72-1.72h5.69a.75.75 0 000-1.5h-5.69l1.72-1.72a.75.75 0 00-1.06-1.06l-3 3z"
+						clip-rule="evenodd"
+					/>
+				</svg>
+			</a>
+			<a
+				href="../index.html"
+				class="group transition-all ease-in-out flex flex-col items-center justify-center h-full gap-2"
+			>
+				<div class="flex items-center justify-center w-full h-full gap-5">
+					<img class="rounded-full w-10" src="../static/images/pdp.JPG" alt="Vergazon's profile picture" />
+					<span class="h-auto font-bungee text-2xl">Vergazon</span>
+				</div>
+				<div class="bg-white h-1 w-0 group-hover:w-full transition-all ease-in-out"></div>
+			</a>
+		</div>
+		<div class="w-full sm:w-2/3 md:w-3/4 font-ubuntu flex flex-col gap-3">
+			<div class="w-full text-center font-bungee text-5xl">Sample file</div>
+			<div class="w-full flex items-center justify-between">
+				<span class="font-ubuntu text-slate-500 text-3xl">Vergazon</span>
+				<span class="font-ubuntu text-slate-500 text-3xl">20/03/2023</span>
+			</div>
+			<div id="customStyle" class="customStyle">
+				<div class="flex flex-col gap-3 text-xl"><p>This file is a sample of what a markdown file <strong>should look like</strong>. It is used to test the compiler. Not every markdown feature is supported, but the most common ones are (headers, codeblocks, links, images, lists, etc.). Every component is styled accordingly to the theme. If a Markdown feature is not featured in this file, it is probably not supported.</p>
+<h1>An h1 header</h1>
 <p>Paragraphs are separated by a blank line.</p>
-<p>2nd paragraph. <em>Italic</em>, <strong>bold</strong>, and <code>monospace</code>. Itemized lists
-look like:</p>
+<p>2nd paragraph. <em>Italic</em>, <strong>bold</strong>, and <code>monospace</code>.</p>
+<p>Itemized lists look like:</p>
 <ul>
 <li>this one</li>
 <li>that one</li>
@@ -43,19 +83,11 @@ for i in 1 .. 10 { do-something(i) }
 </code></pre>
 <p>As you probably guessed, indented 4 spaces. By the way, instead of
 indenting the block, you can use delimited blocks, if you like:</p>
-<p><code>define foobar() {
-    print "Welcome to flavor country!";
-}</code></p>
+<pre><code>define fooBar(self):
+    print(self.text)
+</code></pre>
 <p>(which makes copying &amp; pasting easier). You can optionally mark the
 delimited block for Pandoc to syntax highlight it:</p>
-<p>```python
-import time</p>
-<h1>Quick, count to ten!</h1>
-<p>for i in range(10):
-    # (but not <em>too</em> quick)
-    time.sleep(0.5)
-    print i
-```</p>
 <h3>An h3 header</h3>
 <p>Now a nested list:</p>
 <ol>
@@ -88,41 +120,12 @@ goto first step (or shut off burner when done)
 that last line which continues item 3 above).</p>
 <p>Here's a link to <a href="http://foo.bar">a website</a>, to a <a href="local-doc.html">local
 doc</a>, and to a <a href="#an-h2-header">section heading in the current
-doc</a>. Here's a footnote [^1].</p>
-<p>[^1]: Footnote text goes here.</p>
-<p>Tables can look like this:</p>
-<p>size material color</p>
-<hr />
-<p>9 leather brown
-10 hemp canvas natural
-11 glass transparent</p>
-<p>Table: Shoes, their sizes, and what they're made of</p>
-<p>(The above is the caption for the table.) Pandoc also supports
-multi-line tables:</p>
-<hr />
-<p>keyword text</p>
-<hr />
-<p>red Sunsets, apples, and
-other red or reddish
-things.</p>
-<p>green Leaves, grass, frogs
-and other things it's
-not easy being.</p>
-<hr />
-<p>A horizontal rule follows.</p>
-<hr />
-<p>Here's a definition list:</p>
-<p>apples
-: Good for making applesauce.
-oranges
-: Citrus!
-tomatoes
-: There's no "e" in tomatoe.</p>
-<p>Again, text is indented 4 spaces. (Put a blank line between each
-term/definition pair to spread things out more.)</p>
+doc</a>.</p>
 <p>and images can be specified like so:</p>
-<p><img alt="example image" src="../static/images/1.png" title="An exemplary image" /></p>
+<p><img alt="example image" src="../static/images/2.png" title="An exemplary image" /></p>
 <p>And note that you can backslash-escape any punctuation characters
-which you wish to be displayed literally, ex.: `foo`, *bar*, etc.</p>
+which you wish to be displayed literally, ex.: `foo`, *bar*, etc.</p></div>
+			</div>
+		</div>
 	</body>
 </html>

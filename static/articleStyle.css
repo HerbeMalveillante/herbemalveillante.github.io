@@ -1,0 +1,78 @@
+p {
+	margin-bottom: 0.5em;
+}
+
+h1 {
+	font-size: xx-large;
+	margin-bottom: 1em;
+}
+
+h2 {
+	font-size: x-large;
+	text-decoration: underline;
+}
+
+h3 {
+	font-size: large;
+}
+
+ul {
+	margin-left: 2em;
+	list-style-type: "→";
+}
+
+ol {
+	margin-left: 2em;
+	list-style-type: lower-decimal;
+}
+
+blockquote {
+	margin-left: 2em;
+	padding-left: 15px;
+	border-left: 3px solid white;
+	background-color: #0f172a;
+	padding: 1em;
+}
+
+code {
+	font-family: MyFancyCustomFont, monospace;
+	font-size: inherit;
+	background: #0f172a;
+}
+
+/* Code in text */
+p > code,
+li > code,
+dd > code,
+td > code {
+	background: #0f172a;
+	color: #fb923c;
+	word-wrap: break-word;
+	box-decoration-break: clone;
+	padding: 0.3em;
+	border-radius: 0.2rem;
+}
+
+.customStyle > * > * > a,
+.customStyle > * > a,
+.customStyle > a {
+	color: #fb923c;
+	text-decoration: underline;
+}
+
+.customStyle > * > * > a:hover,
+.customStyle > * > a:hover,
+.customStyle > a:hover {
+	color: #ea580c;
+}
+
+.customStyle > * > * > img,
+.customStyle > * > img,
+.customStyle > img {
+	padding: 1em;
+}
+
+strong {
+	color: #fb923c;
+	font-size: larger;
+}

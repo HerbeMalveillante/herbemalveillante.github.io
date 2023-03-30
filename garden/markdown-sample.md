@@ -1,14 +1,17 @@
 Sample file
-28/03/2023
-Random Github user
+20/03/2023
+Vergazon
 meta, example
+
+This file is a sample of what a markdown file **should look like**. It is used to test the compiler. Not every markdown feature is supported, but the most common ones are (headers, codeblocks, links, images, lists, etc.). Every component is styled accordingly to the theme. If a Markdown feature is not featured in this file, it is probably not supported.
 
 # An h1 header
 
 Paragraphs are separated by a blank line.
 
-2nd paragraph. _Italic_, **bold**, and `monospace`. Itemized lists
-look like:
+2nd paragraph. _Italic_, **bold**, and `monospace`.
+
+Itemized lists look like:
 
 -   this one
 -   that one
@@ -44,23 +47,11 @@ from the left side). Here's a code sample:
 As you probably guessed, indented 4 spaces. By the way, instead of
 indenting the block, you can use delimited blocks, if you like:
 
-```
-define foobar() {
-    print "Welcome to flavor country!";
-}
-```
+    define fooBar(self):
+        print(self.text)
 
 (which makes copying & pasting easier). You can optionally mark the
 delimited block for Pandoc to syntax highlight it:
-
-```python
-import time
-# Quick, count to ten!
-for i in range(10):
-    # (but not *too* quick)
-    time.sleep(0.5)
-    print i
-```
 
 ### An h3 header
 
@@ -92,60 +83,11 @@ that last line which continues item 3 above).
 
 Here's a link to [a website](http://foo.bar), to a [local
 doc](local-doc.html), and to a [section heading in the current
-doc](#an-h2-header). Here's a footnote [^1].
-
-[^1]: Footnote text goes here.
-
-Tables can look like this:
-
-size material color
-
----
-
-9 leather brown
-10 hemp canvas natural
-11 glass transparent
-
-Table: Shoes, their sizes, and what they're made of
-
-(The above is the caption for the table.) Pandoc also supports
-multi-line tables:
-
----
-
-keyword text
-
----
-
-red Sunsets, apples, and
-other red or reddish
-things.
-
-green Leaves, grass, frogs
-and other things it's
-not easy being.
-
----
-
-A horizontal rule follows.
-
----
-
-Here's a definition list:
-
-apples
-: Good for making applesauce.
-oranges
-: Citrus!
-tomatoes
-: There's no "e" in tomatoe.
-
-Again, text is indented 4 spaces. (Put a blank line between each
-term/definition pair to spread things out more.)
+doc](#an-h2-header).
 
 and images can be specified like so:
 
-![example image](../static/images/1.png "An exemplary image")
+![example image](../static/images/2.png "An exemplary image")
 
 And note that you can backslash-escape any punctuation characters
 which you wish to be displayed literally, ex.: \`foo\`, \*bar\*, etc.
