@@ -3,8 +3,6 @@ Generating a static blog using Markdown and Tailwind
 Vergazon
 meta, project
 
-blah
-
 # What is this project ?
 
 I've been looking for a **quick**, **customizable** and **performant** way to create a website and a **blog** for a long time. I can safely say I tried the majority of the existing solutions, and after always being disappointed by the method or language I was using, I finally decided to write a **little compiler** that takes Markdown files as input, and produces clean static HTML files.

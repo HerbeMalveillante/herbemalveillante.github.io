@@ -4,6 +4,8 @@ import markdown
 import datetime
 import re
 from dateutil import parser
+from datetime import datetime
+
 
 class Fruit():
 
@@ -108,13 +110,20 @@ def updateBlog():
 
     fruits = [Fruit(f) for f in getFileNames()]
     dates = [fruit.date for fruit in fruits]
-    sortedDates = sorted(dates, key=lambda date: parser.parse(date), reverse=True)
+    date_objects = sorted([datetime.strptime(date, '%d/%m/%Y') for date in dates], reverse=True)
+
+    print(dates)
+    print(date_objects)
+    # dates are in the format "DD/MM/YYYY"
+    # we need to sort the dates using the datetime module
+    # sortedDates = sorted(dates, key=lambda x: datetime.datetime.strptime(x, '%d/%m/%y'), reverse=True)
+
 
     # then sort the fruits by date
     sortedFruits = []
-    for date in sortedDates:
+    for date in date_objects:
         for fruit in fruits:
-            if fruit.date == date:
+            if datetime.strptime(fruit.date, '%d/%m/%Y') == date:
                 sortedFruits.append(fruit)
                 break
 
@@ -132,7 +141,7 @@ def updateBlog():
         preview = preview.replace("@author@", fruit.author)
         preview = preview.replace("@tags@", ", ".join(fruit.tags))
         preview = preview.replace("@link@", fruit.filepath.replace(".md", ".html"))
-        preview = preview.replace("@preview@", re.sub('<[^<]+?>', '', markdown.markdown(fruit.content))[:500] + "...")
+        preview = preview.replace("@preview@", re.sub('<[^<]+?>', '', markdown.markdown(fruit.content))[:200] + "...")
 
         content += preview
 
