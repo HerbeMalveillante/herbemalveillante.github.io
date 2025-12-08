@@ -3,22 +3,22 @@ languageName = "English"
 languageDirection = "ltr"
 weight = 1
 
-title = "Vergazon"
+title = "Pacôme Renimel"
 # copyright = "Copy, _right?_ :thinking_face:"
 
 [params]
   dateFormat = "2 January 2006"
 
-  mainSections = ["section1", "section2"]
-  description = "My awesome website"
+  # mainSections = ["section1", "section2"]
+  description = "Pacôme Renimel's personal website."
 
 [params.author]
   name = "Pacôme Renimel"
-  # image = "img/author.jpg"
-  headline = "Ça dit quoi l'équipe"
-  bio = "Étudiant en quatrième année à Polytech Tours."
-  # links = [
-  #   { email = "mailto:hello@your_domain.com" },
+  image = "img/luigi.png"
+  headline = "CS Engineering Student"
+  bio = "Fourth year student at Polytech Tours."
+   links = [
+     { email = "mailto:pacome.renimell@gmail.com" },
   #   { link = "https://link-to-some-website.com/" },
   #   { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
   #   { apple = "https://www.apple.com" },
@@ -30,7 +30,7 @@ title = "Vergazon"
   #   { facebook = "https://facebook.com/username" },
   #   { flickr = "https://www.flickr.com/photos/username/" },
   #   { foursquare = "https://foursquare.com/username" },
-  #   { github = "https://github.com/username" },
+     { github = "https://github.com/HerbeMalveillante" },
   #   { gitlab = "https://gitlab.com/username" },
   #   { google = "https://www.google.com/" },
   #   { google-scholar = "https://scholar.google.com/citations?user=user-id" },
@@ -40,7 +40,7 @@ title = "Vergazon"
   #   { kickstarter = "https://www.kickstarter.com/profile/username" },
   #   { kofi = "https://ko-fi.com/username" },
   #   { lastfm = "https://lastfm.com/user/username" },
-  #   { linkedin = "https://linkedin.com/in/username" },
+     { linkedin = "https://www.linkedin.com/in/pacomerenimell/" },
   #   { mastodon = "https://mastodon.instance/@username" },
   #   { medium = "https://medium.com/username" },
   #   { mendeley = "https://www.mendeley.com/" },
@@ -62,6 +62,6 @@ title = "Vergazon"
   #   { twitch = "https://twitch.tv/username" },
   #   { whatsapp = "https://wa.me/phone-number" },
   #   { x-twitter = "https://twitter.com/username" },
-  #   { youtube = "https://youtube.com/username" },
+     { youtube = "https://www.youtube.com/@vergazon" },
   #   { xing = "https://xing.com/profile/username" },
-  # ]
+   ]
